@@ -8,6 +8,10 @@ const Card = () => {
         <p className="card-text">Studying Comp Sci and play video games</p>
 
     </div>
+
+    <style>
+    </style>
+
     </>
 )
 }
