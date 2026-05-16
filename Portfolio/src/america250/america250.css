@@ -137,11 +137,11 @@ body {
   text-decoration: underline; 
 } 
 
-/* --- DETAILS SECTION --- */
+
 .detail-container { 
   margin: 0 auto; 
   font-size: 1.75rem; 
-  width: 100%; /* CRITICAL FIX: Changed from 100rem */
+  width: 100%; 
   max-width: 1200px;
   border-radius: 8px; 
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; 
@@ -158,21 +158,52 @@ body {
   padding: 1.5rem; 
 } 
 
-.address-link {
+.web-link {
   /* CRITICAL FIX: Changes width from 100% to the exact width of the text */
   display: inline-block; 
   
   /* Centers the inline-block element horizontally within its parent container */
   margin: 0 auto; 
-  
+  margin-top: 2rem;  
   text-align: center;
   font-size: 1.5rem;
   padding: 0.75rem 1.5rem; /* Left/right padding creates a clean buffer around text */
+  text-decoration: none;
+  border-radius: 8px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+
+}
+
+.web-link > a{
+    margin: auto;
+    text-decoration: underline;
+    color: #333;
+    font-size: clamp(1rem, 2vw, 1.75rem);
+    font-weight: 600;
+}
+
+.web-link:hover { 
+  background-color: #e4e4e4; 
+} 
+
+
+.address-link {
+
+  display: inline-block; 
+
+  margin: 0 auto; 
+  
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 0.75rem 1.5rem; 
   text-decoration: none;
   color: #333;
   border-radius: 8px;
   word-wrap: break-word;
   overflow-wrap: break-word;
+  font-size: clamp(1rem, 2vw, 1.75rem);
+    font-weight: 600;
 }
 
 .address-link:hover { 

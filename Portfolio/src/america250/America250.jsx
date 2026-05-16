@@ -48,17 +48,18 @@ export default function America250() {
 
       <div className='detail-container'>
         <div className='detail-description'>
-            {targetVenue.description}
+            {targetVenue.description} <br/>
         </div>
+        <div className='web-link'>
+            <a href={targetVenue.website} target='_blank'>Visit the website</a>
+        </div>     
         <ImageCarousel images={carouselImages}/>
         <Map address={targetVenue.address}/>
-
         <div className='detail-description detail-contact'>
+          
             Email us at: {targetVenue.contactEmail} or
             Call us at: 
-          <a className='detail-phone' href={`tel:+1${telHref}`}>
-              {' ' + targetVenue.phone}
-          </a>
+          <a className='detail-phone' href={`tel:+1${telHref}`}>{' ' + targetVenue.phone}</a>
         </div>
       </div>
       </div>

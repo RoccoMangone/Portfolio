@@ -10,7 +10,7 @@ const Header = () => {
               Welcome to RAMCS.dev
           </h1>
           <p>
-              <Link to='/america250' className='am-link'>America250</Link>
+              <Link to='/america250' className='am-link'>America 250</Link>
           </p>
       </header>
     </div>
