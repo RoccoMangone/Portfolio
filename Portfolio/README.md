@@ -18,7 +18,7 @@ If you are developing a production application, we recommend using TypeScript wi
 
 TO RUN SERVER:
 
--Enter "cd my-react-app-t"
+-Enter "cd .\Portfolio\"
 -Enter "npm run dev" (this start up the localhost server)
 -Ctrl + click the link to open up the browser
 ## -Type "q" then hit enter to close the server
