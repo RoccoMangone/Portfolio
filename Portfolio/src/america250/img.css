@@ -1,0 +1,126 @@
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9fafb;
+  text-align: center;
+  margin: 3rem auto;          /* Updated to include vertical space */
+  width: 100%; 
+  max-width: 1200px; 
+  
+}
+
+h2 {
+  font-size: 2rem;
+  color: #1f2937;
+  margin-bottom: 1.5rem;
+  transition: font-size 0.2s ease; /* Smooth text scaling transition */
+}
+
+.image-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0; 
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 1rem;
+  background-color: #fff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+  
+  /* Responsive sizing configuration */
+  width: 92%;                 /* Scaled down from 100% to create breathing room on mobile */
+  max-width: 1200px; 
+  height: 60vh;               /* Replaced fixed 750px with fluid viewport height */
+  min-height: 300px;          /* Prevents collapsing on ultra-small mobile displays */
+  max-height: 750px;          /* Restricts height on massive desktop monitors */
+}
+
+.image-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;            
+  object-fit: cover;       
+  border-radius: 0.75rem;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  
+}
+
+
+/* Adjust your visibility classes to match absolute positioning */
+img.hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+img.block {
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+  animation: fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  font-weight: normal;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.8;
+  transition: background-color 0.3s ease, opacity 0.3s ease;
+  padding: 0;
+  line-height: 1;
+  z-index: 1;
+}
+
+.nav-button.left {
+  left: 1rem;
+}
+
+.nav-button.right {
+  right: 1rem;
+}
+
+.nav-button:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+  opacity: 1;
+}
+
+
+  /* Responsive breakpoint optimization for mobile and tablet devices */
+  @media (max-width: 768px) {
+    h2 {
+      font-size: 1.5rem;        /* Optimization for smaller heading scale */
+    }
+    
+    .image-container {
+      width: 95%;               /* Maximizes layout visibility on small form factors */
+      border-radius: 0.5rem;    /* Refines curve aesthetic for closer layouts */
+    }
+  }

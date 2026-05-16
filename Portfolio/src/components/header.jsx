@@ -1,15 +1,20 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
+// import "../index.css"
 
 const Header = () => {
   return (
-    <header>
-        <h1>
-            Welcome to RAMCS.dev
-        </h1>
-        <p>
-            More coming soon!
-        </p>
-    </header>
+    <div className='home-header'>
+      <header>
+          <h1>
+              Welcome to RAMCS.dev
+          </h1>
+          <p>
+              <Link to='/america250' className='am-link'>America250</Link>
+          </p>
+      </header>
+    </div>
+    
   )
 }
 
