@@ -2,11 +2,11 @@ import { Sequelize } from "sequelize";
 
 //Allows for simpler database calls instead of typing out full SQL
 export const sequelize = new Sequelize(
-    'portfolio_colors', //database name
-    "root", //MySql username
-    "password", //MySQL password (NEVER HARDCODE THE PASSWORD INTO THIS FILE)
+    process.env.DB_NAME, //database name
+    process.env.DB_USER, //MySql username
+    process.env.DB_PASSWORD, //MySQL password (NEVER HARDCODE THE PASSWORD INTO THIS FILE)
     {
-        host: 'localhost',
+        host: process.env.DB_HOST,
         dialect: 'mysql',
     }
 );
